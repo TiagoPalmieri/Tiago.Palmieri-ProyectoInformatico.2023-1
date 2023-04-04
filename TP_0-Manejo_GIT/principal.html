@@ -100,7 +100,15 @@
             <div class="carousel slide" data-ride="carousel" data-interval="10000" id="carousel-1" style="box-shadow: 0px 0px;padding: 10px;">
                 <div class="carousel-inner noticias-slider">
                     <?php //PHP IMAGENES NOTICIAS
-
+                        $query = "SELECT * FROM imagenes where seccion_imagen = 'Noticias' and id = 1";
+                        $envio = $conexion->query($query);
+                        while($row=$envio->fetch_assoc()){
+                    ?>
+                    <div class="carousel-item active">
+                        <img class="w-100 d-block" src="<?php echo $row['URL_imagen'];?>" alt="Slide Image" style="min-height: 200px;">
+                        <p><?php echo $row['descripcion'];?></p>
+                    </div>
+                    <?php } ?>
                     <?php //PHP IMAGENES NOTICIAS
                         $query = "SELECT * FROM imagenes where seccion_imagen = 'Noticias' and id != 1";
                         $envio = $conexion->query($query);
@@ -119,7 +127,17 @@
                     <a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span><span class="sr-only">Next</span>
                     </a>
-
+                </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+                    <?php //PHP IMAGENES NOTICIAS ID
+                        $query = "SELECT URL_imagen FROM imagenes where seccion_imagen = 'Noticias' and id != 1";
+                        $envio = $conexion->query($query);
+                        while($row=$envio->fetch_assoc()){
+                    ?>
+                    <li data-target="#carousel-1" data-slide-to="<?php echo $row['id']-1;?>"></li>
+                    <?php } ?>
+                </ol>
             </div>
             <?php
                 //Modificador admin
@@ -164,7 +182,15 @@
         </div>
     </div>
     <div class="row d-flex justify-content-center" style="margin-right: 0px;margin-left: 0px;">
-        <d= $conexion->query($query);
+        <div class="col-12 text-center" style="padding:0px">
+            <h1 class="d-inline-block titulo">Comentarios<br></h1>
+        </div>
+        <div class="col-12 col-sm-12 col-md-11 col-lg-10 col-xl-10 bloque-info" style="border-radius:20px">
+            <div class="carousel slide" data-ride="carousel" id="carousel-3" style="box-shadow: 0px 0px;padding: 10px;">
+                <div class="carousel-inner" style="filter: blur(0px) brightness(100%) contrast(92%) saturate(100%);border-radius: 35px;padding-bottom: 30px;">
+                    <?php
+                        $query = "SELECT * FROM comentarios LIMIT 15";
+                        $envio = $conexion->query($query);
                         $total = $envio->num_rows;
                         $active = true;
                         $item = $envio->fetch_assoc()['id'] ;
