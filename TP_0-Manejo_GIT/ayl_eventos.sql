@@ -68,9 +68,6 @@ INSERT INTO `comentarios` (`id`, `titulo`, `comentario`, `nombre`, `fecha`) VALU
 (2, 'Excelente', 'Muy buen servicio.', 'Agustin', '0000-00-00'),
 (3, 'Excelente', 'Muy buen servicio.', 'Agustin', '0000-00-00'),
 (4, 'Muy bueno', 'comentariocomentariocomentario', 'Carlos', '2021-09-07'),
-(5, 'Excelente!!!', 'Espectacular todo!! cumpleaños para 60 chicos!! muy buen precioso por la calidad y calidez del servicio!! muy recomendable!! gracias!!!!', 'Laura', '2020-10-10'),
-(6, 'askmdkask', 'kdfakafsdpkapfk1', 'Juan', '2021-09-10'),
-(7, 'fafsda', 'sadasdsda', 'RODRIGO', '2021-09-21'),
 (8, 'gfdsdfsgsfgd', 'fgdfgdsfdgfgds', 'Karina', '2021-09-01');
 
 -- --------------------------------------------------------
@@ -81,7 +78,6 @@ INSERT INTO `comentarios` (`id`, `titulo`, `comentario`, `nombre`, `fecha`) VALU
 
 CREATE TABLE `entradas` (
   `id` int(1) NOT NULL,
-  `entrada` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -111,8 +107,6 @@ CREATE TABLE `entradasespeciales` (
 --
 
 INSERT INTO `entradasespeciales` (`id`, `entradaEspecial`) VALUES
-(1, 'Sandwiches de Matambre'),
-(2, 'Sandwiches de Vitel Toné'),
 (3, 'Arrollado de Pollo');
 
 -- --------------------------------------------------------
@@ -134,14 +128,7 @@ CREATE TABLE `imagenes` (
 
 INSERT INTO `imagenes` (`id`, `seccion_imagen`, `URL_imagen`, `descripcion`) VALUES
 (1, 'Noticias', 'assets/img/Noticias/FamososNoticia.jpg', 'Con Pablo Giralt y el pelado Lopez!!'),
-(2, 'Noticias', 'assets/img/Noticias/JugadoresNoticia1.jpg', 'Con Hernán Crespo y el turco Husain!!'),
-(3, 'Noticias', 'assets/img/Noticias/JugadoresNoticia2.jpg', 'Con Eduardo Tuzzio, Leo Rodriguez y Santiago Ladino!!'),
-(4, 'Noticias', 'assets/img/Noticias/img1_mejorada.jpg', 'Con CAE!!'),
-(5, 'Variedades', 'assets/img/Variedades/Pizzas1.jpg', ''),
-(6, 'Variedades', 'assets/img/Variedades/Pizzas2.jpg', ''),
-(7, 'Variedades', 'assets/img/Variedades/Pizzas3.jpg', ''),
-(8, 'Variedades', 'assets/img/Variedades/Pizzas4.jpg', ''),
-(9, 'Variedades', 'assets/img/Variedades/Pizzas5.jpg', ''),
+(2, 'Noticias', 'assets/img/Noticias/JugadoresNoticia1.jpg', 'Con Hernán Crespo y el turco Husain!!'),,
 (10, 'Variedades', 'assets/img/Variedades/Pizzas6.jpg', ''),
 (11, 'Variedades', 'assets/img/Variedades/Pizzas8.jpg', ''),
 (12, 'Variedades', 'assets/img/Variedades/Pizzas9.jpg', ''),
@@ -157,18 +144,6 @@ INSERT INTO `imagenes` (`id`, `seccion_imagen`, `URL_imagen`, `descripcion`) VAL
 (22, 'Entradas', 'assets/img/Entradas/Entradas6.jpg', ''),
 (23, 'Entradas', 'assets/img/Entradas/Entradas7.jpg', ''),
 (24, 'Entradas', 'assets/img/Entradas/Entradas8.jpg', ''),
-(25, 'Entradas', 'assets/img/Entradas/Entradas9.jpg', ''),
-(26, 'Entradas', 'assets/img/Entradas/Entradas10.jpg', NULL),
-(27, 'EntradasEspeciales', 'assets/img/EntradasEspeciales/Especiales1.jpg', ''),
-(28, 'EntradasEspeciales', 'assets/img/EntradasEspeciales/Especiales2.jpg', ''),
-(29, 'EntradasEspeciales', 'assets/img/EntradasEspeciales/Especiales3.jpg', ''),
-(30, 'EntradasEspeciales', 'assets/img/EntradasEspeciales/Especiales4.jpg', ''),
-(31, 'EntradasEspeciales', 'assets/img/EntradasEspeciales/Especiales5.jpg', ''),
-(32, 'EntradasEspeciales', 'assets/img/EntradasEspeciales/Especiales6.jpg', ''),
-(33, 'Famosos', 'assets/img/Galeria/Famosos1_auto_x2.jpg', ''),
-(34, 'Famosos', 'assets/img/Galeria/Famosos2.jpg', ''),
-(35, 'Famosos', 'assets/img/Galeria/Famosos3.jpg', ''),
-(36, 'Famosos', 'assets/img/Galeria/Famosos4.jpg', ''),
 (37, 'Famosos', 'assets/img/Galeria/Famosos5_auto_x2.jpg', ''),
 (38, 'Famosos', 'assets/img/Galeria/Famosos6.jpg', ''),
 (39, 'Famosos', 'assets/img/Galeria/Famosos7.jpg', ''),
@@ -187,19 +162,6 @@ INSERT INTO `imagenes` (`id`, `seccion_imagen`, `URL_imagen`, `descripcion`) VAL
 (52, 'Produccion', 'assets/img/Galeria/Produccion11.jpg', ''),
 (53, 'Produccion', 'assets/img/Galeria/Produccion12.jpg', ''),
 (54, 'Produccion', 'assets/img/Galeria/Produccion13.jpg', ''),
-(55, 'Produccion', 'assets/img/Galeria/Produccion14.jpg', ''),
-(56, 'Produccion', 'assets/img/Galeria/Produccion15.jpg', NULL),
-(57, 'Produccion', 'assets/img/Galeria/Produccion16.jpg', NULL),
-(58, 'Produccion', 'assets/img/Galeria/Produccion17.jpg', NULL),
-(59, 'Produccion', 'assets/img/Galeria/Produccion18.jpg', NULL),
-(60, 'Produccion', 'assets/img/Galeria/Produccion19.jpg', NULL),
-(61, 'Produccion', 'assets/img/Galeria/Produccion20.jpg', NULL),
-(62, 'Eventos', 'assets/img/Galeria/Eventos1.jpg', ''),
-(63, 'Eventos', 'assets/img/Galeria/Eventos2.jpg', ''),
-(65, 'Eventos', 'assets/img/Galeria/Eventos4.jpg', ''),
-(66, 'Eventos', 'assets/img/Galeria/Eventos5.jpg', ''),
-(67, 'Eventos', 'assets/img/Galeria/Eventos6.jpg', ''),
-(68, 'Eventos', 'assets/img/Galeria/Eventos7.jpg', ''),
 (69, 'Eventos', 'assets/img/Galeria/Eventos8.jpg', ''),
 (70, 'Eventos', 'assets/img/Galeria/Eventos9.jpg', ''),
 (71, 'Eventos', 'assets/img/Galeria/Eventos10.jpg', ''),
@@ -236,10 +198,6 @@ INSERT INTO `variedades` (`id`, `variedad`) VALUES
 (4, 'Huevo'),
 (5, 'Aceitunas'),
 (6, 'Cantimpalo'),
-(7, 'Jamón y Morrón'),
-(8, 'Choclo'),
-(9, 'Salchicha'),
-(10, 'Papas Pay'),
 (11, 'Fugazzeta'),
 (12, 'Roquefort'),
 (13, 'Rúcula'),
@@ -264,7 +222,6 @@ CREATE TABLE `variedadesextra` (
 
 INSERT INTO `variedadesextra` (`id`, `variedadextra`) VALUES
 (1, 'Palmito'),
-(2, 'Jamón Crudo');
 
 --
 -- Índices para tablas volcadas
@@ -312,27 +269,9 @@ ALTER TABLE `variedades`
 ALTER TABLE `variedadesextra`
   ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `combos`
---
 ALTER TABLE `combos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
---
--- AUTO_INCREMENT de la tabla `comentarios`
---
-ALTER TABLE `comentarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT de la tabla `entradas`
---
-ALTER TABLE `entradas`
-  MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `entradasespeciales`
@@ -346,9 +285,6 @@ ALTER TABLE `entradasespeciales`
 ALTER TABLE `imagenes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
---
--- AUTO_INCREMENT de la tabla `variedades`
---
 ALTER TABLE `variedades`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
