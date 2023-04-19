@@ -14,17 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>A&L Eventos</title>
 
-    <!--------------------------VINCULACION CSS-------------------------->
-    
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
-    <link rel="stylesheet" href="assets/css/navbar.css">
-    <link rel="stylesheet" href="assets/css/img-principal.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/admin.css">
-    
-    <!--------------------------FUENTES DE TEXTO-------------------------->
+
 
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
@@ -38,14 +28,7 @@
             <h1 class="titulo-admin">Modo Administrador</h1>
             <a href='cerrar_sesion.php'>Cerrar Sesion de Administrador</a>
         </div>
-    <?php
-        }
-    ?>
-
-    <!--------------------------NAVBAR-------------------------->
-
-    <nav class="navbar navbar-light navbar-expand-md float-none navigation-clean" style="background: rgba(0,0,0,0.66);padding: 0;">
-        <div class="container-fluid">
+    <?
             <a href="index.php"><img src="assets/img/GENERAL/Logo.png" class = "logo"></a>
             <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
                 <i class="icon ion-android-menu" style="color: rgb(55,54,54);font-size: 35px;"></i>
@@ -63,13 +46,7 @@
     </nav>
 
     <!--------------------------CONTENIDO DE LA SECCION-------------------------->
-    
-    <div class="row" style="margin-left: 0px;margin-right: 0px;">
-        <div class="col" style="padding-right: 0;padding-left: 0;">
-            <div class="text-center">
-                <h1 class="d-inline-block titulo">Comentario</h1>
-            </div>
-            <div class="bloque-info formulario-contacto">
+ to">
                 <form action="subirComentario.php" method="POST" style="margin:0 4%;">
 "btn btn-dark" type="submit" name="enviar">Enviar</button>
                     </div>
@@ -82,18 +59,7 @@
     <!--------------------------FOOTER-------------------------->
 
     <footer class="row" style="margin-right: 0px;margin-left: 0px;">
-        <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 d-flex justify-content-center align-items-center flex-column">
-            <div class="d-flex justify-content-center align-items-center flex-wrap titulo-footer">
-                <img src="assets/img/GENERAL/Logo.png" class="logo">
-                <h3>A&L Eventos</h3>
-            </div>    
-            <div class="redes">
-                <a href="https://www.instagram.com/ayl_eventospizzaparty/?hl=es" target="_blank"><i class="fa fa-instagram"></i></a>
-                <a href="https://www.facebook.com/tortasmesadulce.dulcestilo" target="_blank"><i class="fa fa-facebook-square"></i></a>
-                <a href="https://fiesta.mercadolibre.com.ar/MLA-866455332-pizza-party-prepizzas-servicio-de-lunch-_JM" target="_blank">
-                    <img src="assets/img/GENERAL/logomercadolibre.png">
-                </a>
-            </div>
+     
         </div>
         <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 d-flex justify-content-center align-items-center flex-column">
             <div class="texto-footer">
