@@ -2,7 +2,7 @@
     /*
         NOTA: 
         En los casos en los que se eliminan imagenes SOLO se borran los registros de la base de datos, pero la imagen
-        continuará almacenada en el directorio del servidor.
+        continuarรก almacenada en el directorio del servidor.
     */
 
     include ("conexion.php");
@@ -15,15 +15,7 @@
         case 'noticias':
 
             //BORRAR REGISTRO DE LA BASE DE DATOS
-            $query = "DELETE FROM imagenes WHERE id=".$id;
-            $envio = $conexion->query($query);
-            break;
 
-        //-----------------------ELIMINAR COMBOS-----------------------------//
-        case 'combos':
-            $query = "DELETE FROM combos WHERE id=".$id;
-            $envio = $conexion->query($query);
-            break;
 
         //-----------------------ELIMINAR VARIEDADES-----------------------------//
         case 'variedades':
@@ -37,14 +29,7 @@
             $envio = $conexion->query($query);
             break;
         
-        //-----------------------ELIMINAR ENTRADAS-----------------------------//
-        case 'entradas':
-            $query = "DELETE FROM entradas WHERE id=".$id;
-            $envio = $conexion->query($query);
-            break;
-        
-        //-----------------------ELIMINAR ENTRADAS ESPECIALES-----------------------------//
-        case 'entradasespeciales':
+ 
             $query = "DELETE FROM entradasespeciales WHERE id=".$id;
             $envio = $conexion->query($query);
             break;
@@ -54,14 +39,6 @@
             $query = "DELETE FROM imagenes WHERE id=".$id;
             $envio = $conexion->query($query);
             break;
-        
-        //-----------------------ELIMINAR IMAGENES GALERIA-----------------------------//
-        case 'imagenes':
-            $query = "DELETE FROM imagenes WHERE id=".$id;
-            $envio = $conexion->query($query);
-            break;
-    }
-?>
 
 <head>
     <meta charset="utf-8">
@@ -72,18 +49,7 @@
     
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
-    <link rel="stylesheet" href="assets/css/navbar.css">
-    <link rel="stylesheet" href="assets/css/img-principal.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/admin.css">
-    
-    <!--------------------------FUENTES DE TEXTO-------------------------->
-
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville">
+ts.googleapis.com/css?family=Libre+Baskerville">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playball">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Serif+Pro">
@@ -94,7 +60,7 @@
 
     <div style="display:flex;justify-content:center;">
         <div class="caja-mensaje">
-            <h1 class="titulo-admin">Se eliminó el registro correctamente</h1>
+            <h1 class="titulo-admin">Se eliminรณ el registro correctamente</h1>
             <br><br>
             <a href='administracion.php#<?php echo $seccion ?>'>Volver</a>
         </div>
