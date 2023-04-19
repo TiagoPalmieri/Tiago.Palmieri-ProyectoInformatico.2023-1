@@ -49,7 +49,28 @@
         </div>
     <?php
         }
-a class="nav-link" href="nuestras_delicias.php">Nuestras Delicias</a>
+    ?>
+
+
+    <!--------------------------NAVBAR-------------------------->
+
+    <nav class="navbar navbar-light navbar-expand-md float-none navigation-clean" style="background: rgba(0,0,0,0.66);padding: 0;">
+        <div class="container-fluid">
+            <a href="index.php"><img src="assets/img/GENERAL/Logo.png" class = "logo"></a>
+            <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+                <i class="icon ion-android-menu" style="color: rgb(55,54,54);font-size: 35px;"></i>
+                <span class="sr-only" style="opacity: 1;">Toggle navigation</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto" style="text-align: center;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="combos.php">Combos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nuestras_delicias.php">Nuestras Delicias</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="galeria.php">Galeria</a>
@@ -76,7 +97,22 @@ a class="nav-link" href="nuestras_delicias.php">Nuestras Delicias</a>
         //Modificador admin
         if (!empty($_SESSION['contraseña_admin'])){
     ?>
-/PHP IMAGENES VARIEDADES
+        <div class="espacio-admin" style="margin-top:80px;margin-bottom:20px;">
+            <a href="administracion.php#imagen_nuestrasdelicias" class="modificador-admin">Modificar Imagenes</a>
+        </div>
+    <?php
+        }
+    ?>
+
+    <!--------------------------CONTENIDO DE LA SECCION-------------------------->
+
+    <div class="text-center" style="padding: 10px;">
+        <div class="row" style="margin-right: 0px;margin-left: 0px;">         
+            <div class="col-12 text-center" style="padding-right: 0;padding-left: 0;">
+                <h1 class="d-inline-block titulo">Variedades</h1>
+            </div>
+            <section id="galeria" class="columnas4">
+                <?php //PHP IMAGENES VARIEDADES
                     $query = "SELECT * FROM imagenes where seccion_imagen = 'Variedades'";
                     $envio = $conexion->query($query);
                     while($row=$envio->fetch_assoc()){
@@ -115,7 +151,15 @@ a class="nav-link" href="nuestras_delicias.php">Nuestras Delicias</a>
             </div>
             <section id="galeria" class="columnas3">
                 <?php //PHP IMAGENES ENTRADAS ESPECIALES
-e>
+                    $query = "SELECT * FROM imagenes where seccion_imagen = 'EntradasEspeciales'";
+                    $envio = $conexion->query($query);
+                    while($row=$envio->fetch_assoc()){
+                ?>
+                <article>
+                    <a target="_blank" data-lightbox="photos" href="<?php echo $row['URL_imagen'];?>">
+                        <img src="<?php echo $row['URL_imagen'];?>" />
+                    </a>
+                </article>
                 <?php } ?>
             </section>
         </div>
@@ -147,7 +191,13 @@ e>
                 <h6>Celular: 11 5967-1739 (Rodrigo)</h6>
                 <h6>Mail: agusro_mendez@hotmail.com</h6>
             </div>
-
+            <ul>
+                <li><i class="fa fa-chevron-right"></i><a href="index.php">Inicio</a></li>
+                <li><i class="fa fa-chevron-right"></i><a href="combos.php">Combos</a></li>
+                <li><i class="fa fa-chevron-right"></i><a href="nuestras_delicias.php">Nuestras Delicias</a></li>
+                <li><i class="fa fa-chevron-right"></i><a href="galeria.php">Galeria</a></li>
+                <li><i class="fa fa-chevron-right"></i><a href="contacto.php">Contacto</a></li>
+            </ul>
         </div>
     </footer>
 
