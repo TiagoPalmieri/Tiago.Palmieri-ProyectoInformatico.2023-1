@@ -109,6 +109,56 @@ CREATE TABLE `entradasespeciales` (
 INSERT INTO `entradasespeciales` (`id`, `entradaEspecial`) VALUES
 (3, 'Arrollado de Pollo');
 
+CREATE TABLE `comentarios` (
+  `id` int(11) NOT NULL,
+  `titulo` varchar(60) NOT NULL,
+  `comentario` text NOT NULL,
+  `nombre` varchar(60) NOT NULL,
+  `fecha` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `comentarios`
+--
+
+INSERT INTO `comentarios` (`id`, `titulo`, `comentario`, `nombre`, `fecha`) VALUES
+(2, 'Excelente', 'Muy buen servicio.', 'Agustin', '0000-00-00'),
+(3, 'Excelente', 'Muy buen servicio.', 'Agustin', '0000-00-00'),
+(4, 'Muy bueno', 'comentariocomentariocomentario', 'Carlos', '2021-09-07'),
+(8, 'gfdsdfsgsfgd', 'fgdfgdsfdgfgds', 'Karina', '2021-09-01');
+
+-- --------------------------------------------------------
+CREATE TABLE `variedades` (
+  `id` int(11) NOT NULL,
+  `variedad` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `variedades`
+--
+
+INSERT INTO `variedades` (`id`, `variedad`) VALUES
+(1, 'Mozzarella'),
+(2, 'Napolitana'),
+(3, 'Capresse'),
+(4, 'Huevo'),
+(5, 'Aceitunas'),
+(6, 'Cantimpalo'),
+(11, 'Fugazzeta'),
+(12, 'Roquefort'),
+(13, 'Rúcula'),
+(14, 'Parmesano'),
+(15, 'Anchoas'),
+(16, 'Berenjenas');
+
+--
+-- Estructura de tabla para la tabla `entradas`
+--
+
+CREATE TABLE `entradas` (
+  `id` int(1) NOT NULL,
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 -- --------------------------------------------------------
 
 --
@@ -294,6 +344,29 @@ ALTER TABLE `variedades`
 ALTER TABLE `variedadesextra`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
+
+ALTER TABLE `variedadesextra`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `combos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+
+--
+-- AUTO_INCREMENT de la tabla `entradasespeciales`
+--
+ALTER TABLE `entradasespeciales`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `imagenes`
+--
+ALTER TABLE `imagenes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+
+ALTER TABLE `variedades`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
